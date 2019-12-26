@@ -1,0 +1,58 @@
+{% extends "sablon.html" %} {% block icerik %}
+
+<!-- flash() ile app.py'den gelen hata varsa öncelikle bunları sayfada gösterelim-->
+{% with hatalar = get_flashed_messages() %} {% if hatalar %} {% for hata in
+hatalar %}
+<div class="p-3 mb-2 bg-danger text-white">{{ hata }}</div>
+{% endfor %} {% endif %} {% endwith %}
+<br />
+<br />
+<br />
+<br />
+<!-- Sayfa içeriği -->
+<div class="w3-container">
+  <div class="w3-display-container" style="height:500px;">
+    <div class="w3-display-middle w3-padding w3-center" style="width:30%">
+      <h2 class="ui header sc-h2">Kayıt Ol</h2>
+      <img
+        src="/static/img/avatar1.jpg"
+        alt="Avatar"
+        style="width:30%"
+        class="w3-circle w3-margin-top"
+      />
+      <form class="w3-container" action="/kayit" method="POST">
+        <div class="w3-section">
+          <label><b>E posta</b></label>
+          <input
+            class="w3-input w3-border w3-margin-bottom"
+            type="email"
+            id="eposta"
+            name="eposta"
+            placeholder="E-posta adresiniz"
+            required
+          />
+          <label><b>şifre</b></label>
+          <input
+            class="w3-input w3-border"
+            type="password"
+            id="sifre"
+            name="sifre"
+            placeholder="Şifreniz"
+            required
+          />
+          <button
+            class="w3-button w3-block w3-green w3-section w3-padding"
+            type="submit"
+          >
+            Kayıt Ol
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<br />
+<br />
+<br />
+
+{% endblock %}

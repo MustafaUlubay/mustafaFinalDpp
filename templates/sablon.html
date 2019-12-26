@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <title>DPP</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link
+    rel="stylesheet"
+    href="https://www.w3schools.com/lib/w3-theme-blue-grey.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Open+Sans"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <!--Google Font Sayfamıza farklı bir font eklemek istersek onu nasıl yapacağız?-->
+  <link
+    href="https://fonts.googleapis.com/css?family=Raleway:200,300,400&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  />
+
+  <!--CSS Files-->
+  <link rel="stylesheet" href="static/css/semantic.css" />
+  <link rel="stylesheet" href="static/css/styles.css" />
+ 
+</html>
+<body class="w3-theme-l5">
+
+  <!-- Navbar -->
+  <div class="pusher">
+
+      <!--Gerekli olan sementic-ui clası-->
+      <div class="ui vertical segment">
+          <div class="ui container">
+              <!--Menü ile ilgili classlar-->
+              <div class="ui large secondary inverted pointing fixed menu">
+                  <a class="toc item">
+                      <i class="sidebar icon"></i>
+                  </a>
+                  <div class="sc-logo">DPP</div>
+                  <div class="right item">
+                      
+                      <div class="w3-dropdown-hover">
+                        <button onclick="myFunction()" class="w3-button w3-hover-white"><a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Hesebım">
+                            <img src="/static/img/avatar1.jpg" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
+                        </a></button>
+                        <div class="w3-dropdown-content w3-bar-block w3-border">
+                          
+                          <a class="item" href="/giris"><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-light-grey w3-large">Giriş</button></a>
+                          <a class="item" href="/kayit"><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-grey w3-large">Kayıt Ol</button></a>
+                          <a class="item" href="/kapat"><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-grey w3-large">Çıkış</button></a>
+                        </div>
+                    </div>
+
+                             
+                                              
+                  </div>
+
+
+
+              </div>
+          </div>
+      </div>
+  </div>
+  {% block icerik %} {% endblock %}
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+        
+  <div class="sc-logo">DPP</div>
+</footer>
+
+<footer class="w3-container w3-theme-d5">
+  <p>Tarafından<a href="#" target="_blank">Mustafa Ulubay</a></p>
+</footer>
+
+ <!--JS Files-->
+ <script src="{{ url_for('static',filename='static/js/jquery-3.4.1.js')}}"></script>
+ <script src="{{ url_for('static',filename='static/js/semantic.js')}}"></script>
+ <script src="{{ url_for('static',filename='static/js/script.js')}}"></script>
+ <!-- JS -->
+ <script src="{{ url_for('static',filename='js/jquery-3.4.1.slim.min.js') }}"></script>
+ <script src="{{ url_for('static',filename='js/popper.js') }}"></script>
+ <script src="{{ url_for('static',filename='js/all.js') }}"></script>
+ <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+</body>
+
+</html>

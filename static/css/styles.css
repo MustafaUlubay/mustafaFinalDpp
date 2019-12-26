@@ -1,0 +1,175 @@
+/* General Settings - Genel ayarlamaları burada yapıyoruz.*/
+
+h1,
+h2,
+h3,
+.title,
+header {
+  font-family: "Raleway", sans-serif !important;
+}
+
+h2,
+h3 {
+  color: #e74c3c !important;
+  font-weight: 400 !important;
+}
+
+.sc-section {
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+}
+
+/* Main Section*/
+
+.sc-main {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/ansyf.jpg) no-repeat 40% 40% !important;
+  background-size: cover !important;
+  position: relative;
+}
+
+.sc-main.segment {
+  min-height: 100vh;
+}
+
+.sc-header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 80%;
+}
+
+.sc-logo {
+  display: block;
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  font-size: 26px;
+  line-height: 70px !important;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 100%;
+}
+
+.fixed {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  padding-right: 8% !important;
+  padding-left: 8% !important;
+}
+
+.secondary.pointing.menu .toc.item {
+  display: none;
+}
+
+h1.ui.item {
+  font-size: 5em;
+  font-weight: 200;
+  letter-spacing: 5px;
+  color: #ffffff !important;
+}
+
+h1.ui.header {
+  font-size: 5em;
+  font-weight: 200;
+  letter-spacing: 5px;
+}
+
+h1.ui.header::first-letter {
+  color: #e74c3c !important;
+}
+
+.primary {
+  background-color: #e74c3c !important;
+}
+
+.primary:hover {
+  background-color: #c0392b !important;
+}
+
+.sc-button {
+  font-weight: 300 !important;
+  margin-top: 25px !important;
+}
+
+/* SERVICES SETION*/
+
+h2.sc-h2 {
+  font-size: 2.2em !important;
+}
+
+/* PORTFOLIO SECTION*/
+
+#etkinlikler {
+  background-color: #f5f5f5;
+}
+
+/* ABOUT SECTION*/
+
+#hakkında {
+  position: relative;
+}
+
+.sc-vertical:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 275px;
+  bottom: 200px;
+  left: 50%;
+  border-left: 2px solid #c0392b;
+  transform: translate(-50%);
+}
+
+/* TEAM SECTION*/
+
+#organizator {
+  background-color: #f5f5f5;
+}
+
+#anasayfa {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/anasayfa.jpg) no-repeat 50% 50% !important;
+  background-size: cover !important;
+  height: 950px;
+}
+
+#anasayfa p,
+#anasayfa .description {
+  color: #fff;
+}
+
+#anasayfa i.icon {
+  color: rgb(243, 161, 102);
+}
+
+#kayıt {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/iletişim.jpg) no-repeat 50% 50% !important;
+  background-size: cover !important;
+  height: 950px;
+}
+
+#kayıt p,
+#kayıt .description {
+  color: #fff;
+}
+
+#kayıt i.icon {
+  color: rgb(243, 161, 102);
+}
+
+#iletişim {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/contactBackground.jpg) no-repeat 50% 50% !important;
+  background-size: cover !important;
+}
+
+#iletişim p,
+#iletişim .description {
+  color: #fff;
+}
+
+#iletişim i.icon {
+  color: rgb(243, 161, 102);
+}

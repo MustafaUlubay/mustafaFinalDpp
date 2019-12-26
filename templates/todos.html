@@ -1,0 +1,154 @@
+{% extends "sablon.html" %} {% block icerik %}
+<!-- Sayfa içeriği -->
+<br>
+<br>
+
+
+  
+                
+                 <!-- Sayfa Container -->
+    <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+        <!--  Grid -->
+        <div class="w3-row">
+            <!-- sol sütun -->
+            <div class="w3-col m3">
+                <!-- profil -->
+                <div class="w3-card w3-round w3-white">
+                    <div class="w3-container">
+                       
+                        <h4 class="w3-center">Mustafa Ulubay</h4>
+                       
+                        <p class="w3-center"><img src="/static/img/avatar2.jpg" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+                        <hr>
+                       
+                    </div>
+                </div>
+                <br>
+                
+                
+                
+
+                
+
+                <!-- sol sutunun sonu -->
+            </div>
+
+            <!-- orta sütun -->
+            <div class="w3-col m7 ">
+
+                <div class="w3-row-padding">
+                    <div class="w3-col m12">
+                        <div class="w3-card w3-round w3-white">
+                            <div class="w3-container w3-padding">
+                                <form class="w3-container" action="/ekle" method="POST">
+                                    <div class="w3-section">
+                                        <h6 class="w3-opacity">Ödev Adı</h6>
+                                        <input class="w3-input w3-border" type="text" placeholder="Paylaşımının Konusu" id="isim" name="isim" required>
+                                        <h6 class="w3-opacity">Ödev Drive Uzantısı</h6>
+                                        <input class="w3-input w3-border" type="text" placeholder="Drive Uzantısını Giriniz" id="durum" name="durum" required>
+                                        
+                                            <button type="submit" class="w3-button w3-themew3-block w3-green w3-section w3-padding"><i class="fa fa-file"></i>  Paylaş</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                   
+                <div class="w3-container">
+                    {% for yap in yapilacaklar %}
+                        <div class="w3-container w3-card w3-white w3-round w3-margin">
+
+                            <img src="/static/img/avatar2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+                            <span class="w3-right w3-opacity"></span>
+                            <h1>{{ yap.get('isim') }}</h1>
+                                            
+                            <div class="w3-row-padding" style="margin:0 -16px">
+                                <a href="{{ yap.get('durum') }}" target="_blank">Ödevin Drive Linki</a> 
+                            <br>
+                            </div>
+                            
+                        
+                            <button type="button"  class="w3-button w3-themew3-block w3-gray w3-section w3-padding"><a href="/sil/{{ yap.get('_id') }}">
+                                
+                                <i class="fa fa-trash"></i>Sil</a></button>
+                        
+                        
+                        
+                        </div>
+                    {% endfor %}
+                </div>
+              
+            
+
+                <!-- ortan sütunun bitişi -->
+            </div>
+
+            <!-- sağ sütun reklam ve istek kısmı olabilir -->
+            <div class="w3-col m2">
+                <div class="w3-card w3-round w3-white w3-center">
+                    <div class="w3-container">
+                        <p>Kötekli</p>
+                        <img src="/static/img/reklam2.png" style="width:100%;cursor:pointer" onclick="onClick(this)" class="w3-hover-opacity">
+                        <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                            <div class="w3-modal-content w3-animate-zoom">
+                                <img id="img01" style="width:90%">
+                            </div>
+                        </div>
+                        <br>
+                        <p><strong>Coffe</strong></p>
+                        <p>7/24</p>
+                        <p><button class="w3-button w3-block w3-theme-l4">Bilgi</button></p>
+                    </div>
+                </div>
+                <br>
+
+                
+
+
+
+                <!-- sağ sütunun sonu -->
+            </div>
+
+            <!-- grid sonu -->
+        </div>
+
+        <!-- sayfanın sonu -->
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+{% endblock %}
